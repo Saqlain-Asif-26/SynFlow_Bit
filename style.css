@@ -94,11 +94,48 @@ header img{
 .account-btn:hover{
     transform: scale(0.9);   
 }
-.main-image img{
-    border-radius: 30px;
-    object-fit: cover;
-    position: center;
+.main-image{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background: linear-gradient(0deg, rgba(23,37,38,1) 0%, rgba(46,137,144,1) 72%);
+    /* position: relative; */
 }
+.main-icon{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.main-image i{
+    font-size: 8rem;
+    position: absolute;
+    top: 10rem;
+    left: 15rem;
+    height: 10rem;
+}
+.main-image i.i-2{
+    top: 11.5rem;
+    left: 17rem;
+    font-size: 5rem;
+}
+.main-image Ps{
+    height: 20rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+}
+.main-image .p1{
+    font-size: 2rem;
+    color: lightgray;
+}
+.main-image .p2,
+.main-image .p3{
+    font-size: 3rem;
+    color:rgb(88, 197, 183);
+}
+/* ########################### footer ######################### */
 .footer{
     display: flex;
     justify-content: space-between;
@@ -139,25 +176,90 @@ header img{
     font-size: 3rem;
     font-weight: 700;
 }
-.footer-image img{
-    height: 40rem;
-    width: auto;
-    border-radius: 30px;
-    object-fit: cover;
-    position: center;
+.footer-image1{
+    height: 46rem;
+    width: 40rem;
+    border-radius: 25px;
+    background-color: #2e8990;
+    position: relative;
+}
+.footer-image1 i{
+    font-size: 8rem;
+    position: absolute;
+    top: 10rem;
+    left: 15rem;
+    height: 10rem;
+    font-size: 9rem;
+    color: aliceblue;
+}
+.footer-image1 .ps2{
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+}
+.footer-image1 .ps2 .p4{
+    margin-top: 30rem;
+    font-size: 2rem;
+    color: lightgray;
+}
+.footer-image1 .p5,
+.footer-image1 .p6{
+    font-size: 3rem;
+    color: aliceblue;
+}
+.footer-image2{
+    margin-left: 1rem;
+    height: 46rem;
+    width: 40rem;
+    border-radius: 25px;
+    background: radial-gradient(circle, rgba(111,237,236,0.3085609243697479) 63%, rgba(223,255,248,1) 100%);
+    position: relative;
+    border: 2px solid aqua;
+}
+.footer-image2 i.scale{
+    font-size: 8rem;
+    position: absolute;
+    top: 10rem;
+    left: 15rem;
+    height: 10rem;
+    font-size: 9rem;
+    color: #2e8990;
+}
+.footer-image2 .ps3{
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+}
+.footer-image2 .ps3 .p7{
+    margin-top: 30rem;
+    font-size: 2rem;
+    color: gray;
+    margin-bottom: 1rem;
+}
+.footer-image2 .p8{
+    font-size: 3rem;
+    color: #2e8990;
+    font-weight: 700;
+}
+.footer-image2 .p9{
+    font-size: 2rem;
+    color: #3eb0b8;
+}
+.footer-image{
+    display: flex;
+    margin-top: 2rem;
 }
 /* ########################### media query ########################## */
-@media (min-width: 1200px){
+@media (min-width: 1101px) and (max-width: 1280px){
     html{
         font-size: 50%;
     }
-    .footer-image img{
-        height: 35rem;
+    .main-text h1{
+        width: 90rem;
     }
-}
-@media (min-width: 1101px) and (max-width: 1199px){
-    html{
-        font-size: 50%;
+    .footer-text p{
+        width: 15rem;
+    }
+    .footer-text i{
+        font-size: 2.5rem;
     }
     .footer-image img{
         height: 30rem;
@@ -168,19 +270,22 @@ header img{
 }
 @media (min-width: 980px) and (max-width: 1100px){
     html{
-        font-size: 40%;
-    }
-    .main-image img{
-        width: 60rem;
+        font-size: 50%;
     }
     .footer{
         flex-direction: column;
     }
+    .footer-text i{
+        font-size: 2.5rem;
+    }
     .footer-image{
         margin-top: 3rem;
     }
-    .footer-image img{
-        width: 42vw;
+    .footer-image1{
+        width: 50%;
+    }
+    .footer-image2{
+        width: 50%;
     }
     .footer .trust{
         display: none;
@@ -196,14 +301,25 @@ header img{
     .main-image img{
         width: 50rem;
     }
+    .main-text h1{
+        width: 110rem;
+        font-size: 5rem;
+    }
     .footer{
         flex-direction: column;
     }
     .footer-image{
-        margin-top: 4rem;
+        margin-top: 3rem;
     }
-    .footer-image img{
-        width: 50rem;
+    .footer-image1{
+        width: 50%;
+    }
+    .footer-image .ps2,
+    .footer-image .ps3{
+        margin-left: 15rem;
+    }
+    .footer-image2{
+        width: 50%;
     }
     .footer .trust{
         display: none;
@@ -217,12 +333,34 @@ header img{
         font-size: 35%;
     }
     .main-image img{
-        width: 60rem;
-        margin-top: 4rem;
+        width: 50rem;
+    }
+    .main-text h1{
+        width: 90rem;
+        font-size: 5.5rem;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .footer-image{
+        margin-top: 3rem;
+    }
+    .footer-image1{
+        width: 50%;
+    }
+    .footer-image .ps2,
+    .footer-image .ps3{
+        margin-left: 15rem;
+    }
+    .footer-image2{
+        width: 50%;
     }
     @media (max-width: 820px){
-        .main-image img{
-            width: 50rem;
+        html{
+            font-size: 30%;
+        }
+        .main .main-image{
+            width: 100rem;
         }
     }
     .container{
@@ -235,11 +373,6 @@ header img{
         margin-top: 4rem;
         display: flex;
         justify-content: space-between;
-    }
-    .footer-image img{
-        width: 60rem;
-        height: auto;
-        display: block;
     }
     .footer .trust{
         display: none;
@@ -255,18 +388,23 @@ header img{
     .main{
         display: block;
     }
-    .main-image img{
-        margin-top: 1rem;
-        margin-bottom: 3rem;
-        height: auto;
-        width: 60rem;
-    }
     .container{
         margin: 0 -2rem;
     }
     .navbar img{
         margin-left: 30rem;
         margin-bottom: 2rem;
+    }
+    .account-btn{
+        margin-left: 30rem;
+        margin-bottom: 3rem;
+    }
+    .main-image{
+        align-items: center;
+        width: 100%;
+    }
+    .main-image .main-icon{
+        margin-left: 15rem;
     }
     .navbar-btn{
         text-align: center;
@@ -319,29 +457,39 @@ header img{
     .navbar ul{
         display: none;
     }
+    .main-image{
+        align-items: center;
+        width: 100%;
+    }
     .main h1{
         font-size: 4rem;
         margin-top: 3rem;
         width: 100vw;
-    }
-    .main-image img{
-        margin-top: 1rem;
-        margin-bottom: 3rem;
-        height: auto;
-        width: 50rem;
-        text-align: center;
     }
     .footer{
         flex-direction: column;
     }
     .footer-image{
         margin-top: 4rem;
-    }
-    .footer-image img{
-        width: 50rem;
-        height: auto;
-        margin-bottom: 3rem;
         display: block;
+        margin-bottom: 3rem;
+    }
+    .footer-image i{
+        margin-left: 8rem;
+    }
+    .footer-image .ps2,
+    .footer-image .ps3{
+        margin-left: 15rem;
+    }
+    .footer-left{
+        margin-top: 3rem;
+    }
+    .footer-image1{
+        width: 100%;
+    }
+    .footer-image2{
+        width: 98%;
+        margin-top: 3rem;
     }
     .footer .trust{
         display: none;
@@ -361,9 +509,6 @@ header img{
     .container{
         margin: 0 -4rem;
     }
-    .navbr .navbar-btn{
-        margin-top: 7rem;
-    }
     .navbar-btn{
         text-align: center;
         margin-top: 2rem;
@@ -378,33 +523,45 @@ header img{
     .navbar ul{
         display: none;
     }
-    .main-image img{
-        margin-top: 1rem;
-        margin-bottom: 3rem;
-        height: auto;
-        width: 60rem;
+    .main-image{
+        align-items: center;
+        width: 100%;
+    }
+    .main h1{
+        font-size: 5rem;
+        margin-top: 3rem;
+        width: 90vw;
     }
     .footer{
         flex-direction: column;
     }
     .footer-image{
         margin-top: 4rem;
-    }
-    .footer-image img{
-        width: 50rem;
-        height: auto;
-        margin-bottom: 3rem;
         display: block;
+        margin-bottom: 3rem;
+    }
+    .footer-image i{
+        margin-left: 8rem;
+    }
+    .footer-image .ps2,
+    .footer-image .ps3{
+        margin-left: 15rem;
+    }
+    .footer-left{
+        margin-top: 3rem;
+    }
+    .footer-image1{
+        width: 100%;
+    }
+    .footer-image2{
+        width: 98%;
+        margin-top: 3rem;
     }
     .footer .trust{
         display: none;
     }
     .footer .logo-p{
         margin-top: 5rem;
-    }
-    header img{
-        display: block;
-        text-align: center;
     }
 }
 @media (max-width: 444px){
@@ -418,8 +575,71 @@ header img{
     .container{
         margin: 0 -4rem;
     }
-    .navbr .navbar-btn{
-        margin-top: 7rem;
+    .navbar-btn{
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .main{
+        display: block;
+    }
+    .account-btn{
+        margin-left: 20rem;
+        margin-bottom: 3rem;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .main-image{
+        align-items: center;
+        width: 100%;
+    }
+    .main h1{
+        font-size: 5rem;
+        margin-top: 3rem;
+        width: 80vw;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .footer-image{
+        margin-top: 4rem;
+        display: block;
+        margin-bottom: 3rem;
+    }
+    .footer-image i{
+        margin-left: 8rem;
+    }
+    .footer-image .ps2,
+    .footer-image .ps3{
+        margin-left: 15rem;
+    }
+    .footer-left{
+        margin-top: 3rem;
+    }
+    .footer-image1{
+        width: 100%;
+    }
+    .footer-image2{
+        width: 98%;
+        margin-top: 3rem;
+    }
+    .footer .trust{
+        display: none;
+    }
+    .footer .logo-p{
+        margin-top: 5rem;
+    }
+}
+@media (min-width: 369px) and (max-width: 443px){
+    html{
+        font-size: 40%;
+    }
+    body{
+        width: 100%;
+        overflow: hidden;
+    }
+    .container{
+        margin: 0 -4rem;
     }
     .navbar-btn{
         text-align: center;
@@ -435,23 +655,39 @@ header img{
     .navbar ul{
         display: none;
     }
-    .main-image img{
-        margin-top: 1rem;
-        margin-bottom: 3rem;
-        height: auto;
-        width: 40rem;
+    .main-image{
+        align-items: center;
+        width: 100%;
+    }
+    .main h1{
+        font-size: 5rem;
+        margin-top: 3rem;
+        width: 80vw;
     }
     .footer{
         flex-direction: column;
     }
     .footer-image{
         margin-top: 4rem;
-    }
-    .footer-image img{
-        width: 50rem;
-        height: auto;
-        margin-bottom: 3rem;
         display: block;
+        margin-bottom: 3rem;
+    }
+    .footer-image i{
+        margin-left: 8rem;
+    }
+    .footer-image .ps2,
+    .footer-image .ps3{
+        margin-left: 15rem;
+    }
+    .footer-left{
+        margin-top: 3rem;
+    }
+    .footer-image1{
+        width: 100%;
+    }
+    .footer-image2{
+        width: 98%;
+        margin-top: 3rem;
     }
     .footer .trust{
         display: none;
@@ -459,8 +695,71 @@ header img{
     .footer .logo-p{
         margin-top: 5rem;
     }
-    header img{
-        display: block;
+}
+@media (max-width: 368px){
+    html{
+        font-size: 35%;
+    }
+    body{
+        width: 100%;
+        overflow: hidden;
+    }
+    .container{
+        margin: 0 -4rem;
+    }
+    .navbar-btn{
         text-align: center;
+        margin-top: 2rem;
+        /* display: block; */
+    }
+    .main{
+        display: block;
+    }
+    .account-btn{
+        margin-left: 20rem;
+        margin-bottom: 3rem;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .main-image{
+        align-items: center;
+        width: 100%;
+    }
+    .main h1{
+        font-size: 4rem;
+        margin-top: 3rem;
+        width: 80vw;
+    }
+    .footer{
+        flex-direction: column;
+    }
+    .footer-image{
+        margin-top: 4rem;
+        display: block;
+        margin-bottom: 3rem;
+    }
+    .footer-image i{
+        margin-left: 8rem;
+    }
+    .footer-image .ps2,
+    .footer-image .ps3{
+        margin-left: 8rem;
+    }
+    .footer-left{
+        margin-top: 3rem;
+    }
+    .footer-image1{
+        width: 100%;
+    }
+    .footer-image2{
+        width: 98%;
+        margin-top: 3rem;
+    }
+    .footer .trust{
+        display: none;
+    }
+    .footer .logo-p{
+        margin-top: 5rem;
     }
 }
